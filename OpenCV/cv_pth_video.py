@@ -4,7 +4,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 from torchvision.transforms import transforms
-from resnet18 import ResNet, ResBlock
+from OpenCV.resnet18 import ResNet, ResBlock
 
 # load model
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
