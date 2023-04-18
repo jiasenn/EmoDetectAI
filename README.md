@@ -11,3 +11,7 @@ We mainly uses tensorflow and pytorch for the training and testing of our data. 
 * pandas
 * matplotlib
 * seaborn
+
+
+## Running the tests
+To run the tests, simply run the OpenCV folder. Two different py file correspond to the pytorch model and the tensorflow model. This will open up a window that will detect your face and display the emotion that is being detected.
