@@ -12,6 +12,16 @@ We mainly uses tensorflow and pytorch for the training and testing of our data. 
 * matplotlib
 * seaborn
 
+## Model Training
+Each notebook correspond to a different model.
+* `baseline_cnn.ipynb` - Trains a 3 layer CNN model using pytorch
+* `CNN.ipynb` - Trains a 7 layer CNN model using pytorch
+* `GoogLEnet.ipynb` - Trains a GoogLeNet CNN model using pytorch
+* `MobileNet.ipynb` - Trains a Inception CNN model using tensorflow
+* `ResNet.ipynb` - Trains a ResNet CNN model using pytorch
+
 
 ## Running the tests
 To run the tests, simply run the OpenCV folder. Two different py file correspond to the pytorch model and the tensorflow model. This will open up a window that will detect your face and display the emotion that is being detected.
+
+cv_pth_video.py runs the pytorch model for real time video emotion detection using the best model we have trained, which is the ResNet model. It has an accuracy of 61.23% on the test set.
