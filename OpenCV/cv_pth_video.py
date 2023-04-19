@@ -8,8 +8,9 @@ from resnet18 import ResNet, ResBlock
 
 # load model
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model = ResNet(3, ResBlock, [2, 2, 2, 2], useBottleneck=False, outputs=7)
-model.load_state_dict(torch.load('../model resnet18.pth', map_location=device))
+# model = ResNet(3, ResBlock, [2, 2, 2, 2], useBottleneck=False, outputs=7) # 3 channel
+model = ResNet(1, ResBlock, [2, 2, 2, 2], useBottleneck=False, outputs=7) # grayscale
+model.load_state_dict(torch.load('../model resnet 18 new.pth', map_location=device))
 model.eval()
 
 face_haar_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
@@ -40,7 +41,7 @@ while True:
 
         cv2.putText(test_img, predicted_emotion, (int(x), int(y)), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
 
-    resized_img = cv2.resize(test_img, (1000, 700))
+    resized_img = cv2.resize(test_img, (1000, 1000))
     cv2.imshow('Facial emotion analysis', resized_img)
 
     if cv2.waitKey(10) == ord('q'):  # wait until 'q' key is pressed
