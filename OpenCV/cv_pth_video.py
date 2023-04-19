@@ -4,12 +4,12 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 from torchvision.transforms import transforms
-from OpenCV.resnet18 import ResNet, ResBlock
+from resnet18 import ResNet, ResBlock
 
 # load model
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = ResNet(3, ResBlock, [2, 2, 2, 2], useBottleneck=False, outputs=7)
-model.load_state_dict(torch.load('model_resnet18.pth', map_location=device))
+model.load_state_dict(torch.load('../model resnet18.pth', map_location=device))
 model.eval()
 
 face_haar_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
