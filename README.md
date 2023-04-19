@@ -24,4 +24,4 @@ Each notebook correspond to a different model.
 ## Running the tests
 To run the tests, simply run the OpenCV folder. Two different py file correspond to the pytorch model and the tensorflow model. This will open up a window that will detect your face and display the emotion that is being detected.
 
-cv_pth_video.py runs the pytorch model for real time video emotion detection using the best model we have trained, which is the ResNet model. It has an accuracy of 61.23% on the test set.
+`cv_pth_video.py` runs the pytorch model for real time video emotion detection using the best model we have trained, which is the ResNet model. It has an accuracy of 61.23% on the test set.
