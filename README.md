@@ -16,8 +16,8 @@ We mainly uses tensorflow and pytorch for the training and testing of our data. 
 Each notebook correspond to a different model.
 * `baseline_cnn.ipynb` - Trains a 3 layer CNN model using pytorch
 * `CNN.ipynb` - Trains a 7 layer CNN model using pytorch
-* `GoogLEnet.ipynb` - Trains a GoogLeNet CNN model using pytorch
-* `MobileNet.ipynb` - Trains a Inception CNN model using tensorflow
+* `GoogLEnet.ipynb` - Trains a Inception CNN model using pytorch
+* `MobileNet.ipynb` - Trains a MobileNet CNN model using tensorflow
 * `ResNet.ipynb` - Trains a ResNet CNN model using pytorch
 
 
